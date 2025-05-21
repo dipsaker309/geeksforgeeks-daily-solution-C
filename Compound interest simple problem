@@ -1,0 +1,15 @@
+/* What amount is to be repaid on a loan of Rs. 12000 for one and 
+ half years at 10% per annum compounded half yearly? */
+ #include<stdio.h>
+#include<math.h>
+int main()
+{
+   double A , P , r , n , t;
+   r = 10.0; // annual rate
+   P = 12000; //Given in question
+   n = 2.0; //  compouded half yearly|
+   t = 1.5; // half yearly
+   A = P * pow(1 + (r / (n * 100)) , n * t);
+   printf("The compounded amout: %.2lf \n", A);
+   return 0;
+}
