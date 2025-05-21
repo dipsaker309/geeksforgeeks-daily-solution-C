@@ -1,0 +1,15 @@
+/* Rishav takes a loan of Rs 10000 from a bank for a period of 1 year. 
+The rate of interest is 10% per annum. 
+Find the interest and the amount he has to pay at the end of a year. */
+ #include<stdio.h>
+int main()
+{
+   double A , p , r , t;
+   p = 10000 , r = 10 , t = 1;
+   double multi = p * t * r;
+   double si = multi / 100;
+   A = p * (1 + r * t);
+   printf("The interest is : %.2lf\n ",si);
+   printf("The amount has to be paid: %.2lf\n",A);
+   return 0;
+}
