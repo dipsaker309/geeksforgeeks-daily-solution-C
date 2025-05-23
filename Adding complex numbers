@@ -1,0 +1,26 @@
+
+/*C Program to Add Two Complex Numbers */
+ #include<stdio.h>
+ typedef struct complexnumber
+ {
+    float real; 
+    float img;
+ }complex;
+ complex add(complex x, complex y);
+ int main()
+ {
+    complex a , b , sum;
+    printf("Enter the real and imaginary part of 1st Complex number: \n");
+    scanf("%f %f",&a.real, &a.img);
+    printf("Enter the real and imaginary part of 2nd complex number: \n");
+    scanf("%f %f",&b.real,&b.img);
+    sum = add(a , b);
+    printf("\nSum : %.2f + %.2fi",sum.real , sum.img);
+ }
+ complex add(complex x , complex y)
+ {
+    complex add;
+    add.real = x.real + y.real;
+    add.img = x.img + y.img;
+    return (add);
+ }
