@@ -1,0 +1,17 @@
+/*Sum of all n natuaral number  */
+ #include<stdio.h>
+int main()
+{
+    double n , i , sum = 0;
+    printf("Enter a natural number: ");
+    scanf("%lf",&n);
+    if(n < 1)
+    {
+        return 1;
+    }
+    for(i = 1; i <= n ; i++)
+    {
+        sum += i;
+    }
+    printf("Sum of all natuaral numbers between 1 to %.2lf : %.2lf", n , sum);
+}
