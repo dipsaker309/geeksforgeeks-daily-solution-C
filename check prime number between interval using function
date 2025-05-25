@@ -1,0 +1,34 @@
+/*C Program to Display Prime Numbers Between Two Intervals Using Functions */
+#include<stdio.h>
+#include<math.h>
+int checkisPrime(int number);
+int main()
+{
+    int n1 , n2 , j , f;
+    printf("Enter a number for starting point: ");
+    scanf("%d",&n1);
+    printf("Enter a number for ending point: ");
+    scanf("%d",&n2);
+    for(j = n1; j <= n2 ; ++j )
+    {
+        f = checkisPrime(j);
+        if(f == 1)
+        {
+            printf("%d ",j);
+        }
+    } 
+
+}
+int checkisPrime(int number)
+{
+   int i , f = 1;
+   for(i = 2; i <= sqrt(number) ; ++i)
+   {
+    if(number % i == 0)
+    {
+        f = 0;
+        break;
+    }
+   } 
+   return f;
+}
