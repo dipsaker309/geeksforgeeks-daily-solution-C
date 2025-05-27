@@ -1,0 +1,13 @@
+/*Sum of two numbers using pointers */
+#include<stdio.h> 
+int main()
+{
+    int num1, num2 , sum ;
+    int *ptr1, *ptr2;
+    ptr1 = &num1; //stores value of num1
+    ptr2 = &num2; //stores value of num2
+    printf("Enter two positive integers: ");
+    scanf("%d %d",ptr1,ptr2);//pointers are keeping the value of two numbers
+    sum = *ptr1 + *ptr2;
+    printf("Sum of two numbers: %d",sum);
+}
