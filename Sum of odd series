@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+// Recursive function to sum odd numbers up to n
+int sumOdd(int n) {
+    if (n <= 0)
+        return 0;
+    if (n % 2 == 0)
+        n--; // make n odd if it's even
+    return n + sumOdd(n - 2);
+}
+
+int main() {
+    int n;
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+    printf("Sum of odd series = %d\n", sumOdd(n));
+    return 0;
+}
