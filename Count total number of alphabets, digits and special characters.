@@ -1,0 +1,29 @@
+/*Count total number of alphabets, digits and special characters.*/
+#include<stdio.h> 
+#include<stdlib.h>
+#define str_size 100
+int main()
+{
+   char str[str_size];
+   int alp =0, digits =0, splch = 0, i = 0;
+   printf("Input the string :");
+   fgets(str, sizeof str, stdin);
+   while(str[i] != '\0') // Until it reaches null character
+   {
+    if((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')){
+        alp++;
+        
+    }
+    else if(str[i] >= '0' && str[i] <= '9')// must put ''
+    {
+        digits++;
+    }
+    else{
+        splch++;
+    }
+    i++; // must increment because it will move then
+   }
+   printf("Number of alphabet: %d \n",alp);
+   printf("Number of digits : %d \n",digits);
+   printf("Number of special character: %d \n",splch);
+}
