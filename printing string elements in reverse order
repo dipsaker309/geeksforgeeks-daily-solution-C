@@ -1,0 +1,26 @@
+/*printing elements of string in reverse order */
+#include<stdio.h> 
+#include<string.h>
+void rev(char *s);
+int main()
+{
+    char str[] ="TENET";
+    printf("The string is : %s \n",str);
+    rev(str); // pass str, not &str
+    printf("The reverse of the string is : %s",str);
+    return 0;
+}
+void rev(char* s)
+{
+    int l = 0;
+    int r = strlen(s) - 1;
+    char t;
+    while(l < r) // Must
+    {
+        t= s[l];
+        s[l] = s[r];
+        s[r] = t;
+        l++;
+        r--;
+    }
+}
