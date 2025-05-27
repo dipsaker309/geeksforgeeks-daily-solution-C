@@ -1,0 +1,46 @@
+/*Find factorial of the difference between the largest and smallest in an array */
+#include<stdio.h> 
+int findmax(int arr[] , int n){
+    
+    int max = arr[0];
+    for(int i = 0; i < n ; i++)
+    {
+        if(arr[i] > max)
+        {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+int findmin(int arr[], int n)
+{
+     int min = arr[0];
+    for(int i = 0; i < n ; i++)
+    {
+        if(arr[i] < min)
+        {
+            min = arr[i];
+        }
+    }
+    return min;
+
+}
+int factorial(int n){
+     if(n <= 1)
+    {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+int main()
+{
+    int arr[] = {7 , 4 , 3 , 8 , 9 , 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int max = findmax(arr , n);
+    int min = findmin(arr , n);
+    int diff = max - min;
+    printf("Maximum element of array: %d \n",max);
+    printf("Minimum element of array: %d \n",min);
+    printf("Difference is : %d \n", diff);
+    printf("Factorial of difference is  : %d ",factorial(n));
+}
