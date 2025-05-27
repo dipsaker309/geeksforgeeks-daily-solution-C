@@ -1,0 +1,12 @@
+/*Create initialize and access pointer */
+#include<stdio.h> 
+int main()
+{
+    int num , *num1 ;
+    printf("Enter a value of num: ");
+    scanf("%d",&num);
+    num1 = &num;
+    printf("Value of num: %d\n",num);
+    printf("Address of num: %p\n", (void*)num1); 
+    printf("Value at address stored in num1: %d\n", *num1);
+}
