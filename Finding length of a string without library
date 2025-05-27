@@ -1,0 +1,13 @@
+/*Finding length of a string without library */
+#include<stdio.h> 
+int main()
+{
+    char str[] = "Hello World!";
+    int length = 0;
+    while(str[length] != 0) // until '\0' character 
+    {
+        length++;
+    }
+    printf("Length of the string is: %d ",length);
+
+}
