@@ -1,0 +1,22 @@
+/*Sum of Even number series using recursive function */
+#include<stdio.h> 
+int sumeven(int n);
+int main()
+{
+    int n;
+    printf("Enter a value of n: ");
+    scanf("%d",&n);
+    printf("Sum of all even numbers: %d\n",sumeven(n));
+    return 0;
+}
+int sumeven(int n){
+    if(n < 0) // Check if its positive
+    {
+        return 0;
+    }
+    if(n % 2 != 0)
+    {
+        n--; // make sure its even
+    }
+    return n + sumeven(n-2);
+}
