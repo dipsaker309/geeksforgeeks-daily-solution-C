@@ -1,0 +1,26 @@
+/*Sum of first n natural number */
+#include<stdio.h>
+int sumofn(int n);
+int main()
+{
+    int n;
+    printf("Enter a natural number: ");
+    scanf("%d",&n);
+    if(n < 1)
+    {
+        printf("ERROR! Please Enter a number from 1 to above");
+        return 1;
+    }
+    printf("Sum of first %d natural number is: %d ",n,sumofn(n));
+    return 0;
+}
+int sumofn(int n)
+{
+    if(n == 1)
+    {
+        return 1; // Base Case
+    }
+    else{
+        return n + sumofn(n - 1);
+    }
+}
