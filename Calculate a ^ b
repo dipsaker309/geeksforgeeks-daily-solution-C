@@ -1,6 +1,6 @@
 /*Calculate a ^ b using recursion*/
 #include <stdio.h>
-long long power(int a, int b) {
+double power(int a, int b) {
     if (b == 0)
         return 1;
     else if (b < 0)
@@ -17,8 +17,8 @@ int main() {
     printf("Enter the exponent: ");
     scanf("%d", &exponent);
 
-    long long result = power(base, exponent);
-    printf("%d^%d = %lld\n", base, exponent, result);
+    double result = power(base, exponent);
+    printf("%d^%d = %lf\n", base, exponent, result);
 
     return 0;
 }
