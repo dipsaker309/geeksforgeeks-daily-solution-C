@@ -1,0 +1,64 @@
+/*Calculate sum of an array*/
+#include<stdio.h>
+int main()
+{
+    int A[100][100], B[100][100], C[100][100];
+    int i , j , rowA, columnA, rowB, columnB;
+    printf("Enter the row number of Array A : ");
+    scanf("%d" , &rowA);
+    printf("Enter the column number of Array A : ");
+    scanf("%d" , &columnA);
+    printf("Enter the row number of Array B : ");
+    scanf("%d" , &rowB);
+    printf("Enter the column number of Array B : ");
+    scanf("%d" , &columnB);
+    if(rowA != rowB || columnA != columnB){
+        printf("Enter same number of row and column for both array.");
+        return 1;
+    }
+    for(i = 0 ; i < rowA ; i++)
+    {
+        for(j = 0; j < columnA ; j++)
+        {
+            printf("A[%d][%d] : ",i,j);
+            scanf("%d" , &A[i][j]);
+        }
+    }
+    for(i = 0; i < rowB ; i++){
+        for(j = 0; j < columnB ; j++){
+            printf("B[%d][%d] : ",i , j);
+            scanf("%d", &B[i][j]);
+        }
+    }
+    printf("Array A is : \n");
+    for(i = 0; i < rowA ; i++){
+        for(j = 0; j < columnA; j++)
+        {
+            printf( "%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+        printf("\nArray B is : \n");
+    for(i = 0; i < rowB ; i++){
+        for(j = 0; j < columnB; j++)
+        {
+            printf( "%d ", B[i][j]);
+        }
+        printf("\n");
+    }
+    for(i = 0; i < rowA ; i++)
+    {
+        for(j = 0; j < columnA ; j++){
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+    printf("Sum of A and B Array : \n");
+    for(i = 0; i < rowA; i++){
+        for(j = 0; j < columnA; j++)
+        {
+            printf("%d ", C[i][j]);
+        }
+        printf("\n");
+    }
+  
+}
