@@ -1,0 +1,20 @@
+/*Count size of array without using sizeof function*/
+#include<stdio.h>
+int main()
+{
+    int arr[] = {2 , 5 , 6 , 7 , 8 , 9 , 10 };
+    int length = 0;
+    for(int i = 0; arr[i] != 0 ; i++)
+    {
+        if(arr[i] == 0)
+        {
+            break;
+        }
+        length++;
+        if(length == 7)
+        {
+            break;
+        }
+    }
+    printf("The total amount of array: %d", length);
+}
