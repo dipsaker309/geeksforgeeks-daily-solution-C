@@ -1,0 +1,27 @@
+/*Reverse array elements and print*/
+#include<stdio.h>
+int main(){
+    int arr[100] , n , i , temp;// n for number of array of elements and 
+    //i for iteration of loop
+    printf("Enter number of array element : ");
+    scanf("%d",&n);
+    for(i = 0 ; i < n; i++) // loop for assigning array elements
+    {
+        printf("Enter arr[%d] : ",i);
+        scanf("%d",&arr[i]);
+    }
+    printf("\nThe array elements : ");
+    for(i = 0; i < n ; i++){ // loop for printing array elements
+        printf("%d ",arr[i]);
+    }
+    for(i = 0; i < n ; i++)
+    {
+        temp = arr[i];
+        arr[i] = arr[n - 1 -i];
+        arr[n - 1 -i] = temp;
+    }
+    printf("\nReversed array : ");
+    for(i = 0; i < n ; i++){ //loop for printing reversed array elements
+        printf("%d ", arr[i]);
+    }
+}
