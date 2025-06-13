@@ -1,0 +1,62 @@
+/*Only print odd/even number from the array element and find sum and product*/
+#include<stdio.h>
+int main(){
+    int arr[100] , n , i;
+    int sumodd = 0 , productodd = 1;
+    int sumeven = 0, producteven = 1;
+    int hasodd = 0, haseven = 0;
+    printf("Enter number of array elements : ");
+    scanf("%d", &n);
+    printf("Enter array elements: \n");
+    for(i = 0; i < n ; i++)
+    {
+        printf("arr[%d] = ",i);
+        scanf("%d",&arr[i]);
+    }
+    printf("The array elements are: "); 
+    for(i = 0; i < n ; i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\nEven numbers: ");
+    for(i = 0; i < n ; i++)
+    {
+        if(arr[i] % 2 == 0)
+        {
+            printf("%d ", arr[i]);
+        }
+
+    }
+    printf(" \nOdd numbers : ", arr[i]);
+    for(i = 0; i < n ; i++){
+
+        if(arr[i] % 2 != 0){
+            printf("%d ",arr[i]);
+        }
+    }
+    for(i = 0; i < n ; i++)
+    {
+        if(arr[i] % 2 == 0)
+        {
+            
+            sumeven += arr[i];
+            producteven *= arr[i];
+            haseven = 1;
+            
+        }
+        if(arr[i] % 2 != 0){
+            sumodd += arr[i];
+            productodd *= arr[i];
+            hasodd = 1;
+        }
+    }
+    if(hasodd = 1){
+        printf("\nSum of odd numbers is : %d\n" , sumodd);
+        printf("product of odd numbers is : %d\n", productodd);
+        
+    }
+    if(haseven = 1){
+        printf("Sum of even numbers is: %d\n", sumeven);
+        printf("Product of even number is : %d\n", producteven);
+    }
+    return 0;
+}
