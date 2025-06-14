@@ -1,0 +1,40 @@
+/*Insert element at specific position of array*/
+#include<stdio.h>
+int main()
+{
+    int arr[100] , n , i , pos , value;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    printf("Enter the elemets: \n"); /*for inputing elements*/
+    for(i = 0; i < n ; i++){
+        printf("arr[%d] : ",i);
+        scanf("%d", &arr[i]);
+    }
+    printf("Array elements are: "); //for printing array after input
+    for(i = 0; i < n; i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\nEnter the position to insert(1 to %d) : ", n + 1);
+    scanf("%d", &pos);
+    if(pos < 1 || pos > n + 1)
+    {
+        printf("Invalid position!\n");
+        return 1;
+    }
+    printf("Enter the value to be inserted : ");
+    scanf("%d", &value);
+    for(i = n; i >= pos; i-- ){ // Shifts elements to the right
+        arr[i] = arr[i - 1];
+        
+    }
+     arr[pos - 1] = value; // Insert position
+     n++; // Increase size of array
+    printf("Array after insertion : ");
+    for(i = 0; i < n ; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+
+}
