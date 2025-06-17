@@ -1,29 +1,32 @@
-/*Count total number of alphabets, digits and special characters.*/
-#include<stdio.h> 
-#include<stdlib.h>
-#define str_size 100
+/*Count digits , uppercase, lowercase, special case of a string*/
+#include<stdio.h>
+#include<string.h>
 int main()
 {
-   char str[str_size];
-   int alp = 0, digits = 0, splch = 0, i = 0;
-   printf("Input the string :");
-   fgets(str, sizeof str, stdin);
-   while(str[i] != '\0') // Until it reaches null character
-   {
-    if((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')){
-        alp++;
-        
+    char str[100];
+    int i = 0;
+    printf("Enter the string : ");
+    fgets(str , sizeof(str) , stdin);
+    int digits = 0, uppercase = 0, lowercase = 0, splch = 0; // whitespace is special character
+    while(str[i] != 0){
+        if(str[i] >= '0' && str[i] <= '9')
+        {
+            digits++;
+        }
+        if(str[i] >= 'a' && str[i] <= 'z'){
+            lowercase++;
+        }
+        if(str[i] >= 'A' && str[i] <= 'Z'){
+            uppercase++;
+        }
+        else{
+            splch++;
+        }
+        i++;
     }
-    else if(str[i] >= '0' && str[i] <= '9')// must put ''
-    {
-        digits++;
-    }
-    else{
-        splch++;
-    }
-    i++; // must increment because it will move then
-   }
-   printf("Number of alphabet: %d \n",alp);
-   printf("Number of digits : %d \n",digits);
-   printf("Number of special character: %d \n",splch);
+    printf("Number of digits : %d\n",digits);
+    printf("Number of uppercase : %d\n", uppercase);
+    printf("Number of lowercase : %d\n",lowercase);
+    printf("Number of special character : %d\n", splch);
+
 }
