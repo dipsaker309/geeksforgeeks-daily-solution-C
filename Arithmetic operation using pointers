@@ -1,0 +1,25 @@
+/*Arithmetic operation using pointers*/
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int *p1 , *p2 , a ,b; 
+    int sum , dif , multi;
+    float average , div;
+    double power;
+    printf("Enter values of a and b: ");
+    scanf("%d %d", &a , &b); 
+    p1 = &a;
+    p2 = &b;
+    sum = *p1 + *p2;
+    dif = *p1 - *p2;
+    multi = *p1 * *p2;
+    div =(float) *p1 / *p2; 
+    average = (float)sum / 2;
+    power =pow ((double)*p1 , (double)*p2);
+    printf("Sum is : %d\n", sum);
+    printf("difference  is : %d\n",dif);
+    printf("multiplication is : %d\n",multi);
+    printf("Quotient is : %.2f\n",div);
+    printf("Average is : %.2f\n", average);
+    printf("%d raised to the power %d is : %.2lf\n", *p1 , *p2 , power);
+}
