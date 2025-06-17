@@ -1,0 +1,35 @@
+/*Checking if matrix is symmetrical */
+#include<stdio.h>
+int main()
+{
+    int i, j, n;
+    int issymmetric = 1;
+    printf("Enter the size of the square matrix: ");
+    scanf("%d", &n);
+    int matrix[n][n];
+    printf("Enter the matrix elements:\n");
+    for(i = 0; i < n; i++){
+        for(j = 0; j < n; j++){
+            printf("matrix[%d][%d]: ", i, j);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    for(i = 0; i < n; i++){
+        for(j = 0; j < n; j++){
+            if(matrix[i][j] != matrix[j][i]){
+                issymmetric = 0;
+                break;
+            }
+        }
+        if(issymmetric == 0){
+            break;
+        }
+    }
+    if(issymmetric == 1){
+        printf("The matrix is symmetric\n");
+    }
+    else{
+        printf("The matrix is not symmetric\n");
+    }
+    return 0;
+}
