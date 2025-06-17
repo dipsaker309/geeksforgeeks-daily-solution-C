@@ -1,23 +1,22 @@
-/*Swapping numbers using pointers */
-#include<stdio.h> 
-void swapnum(int *x, int *y)
-{
-    int temp = *x;
-    *x = *y;
-    *y = temp; 
-
-}
+/*Swap two numbers using pointer*/
+#include<stdio.h>
+void swapnum(int *a , int *b);
 int main()
 {
-    int a, b;
-    printf("Enter value of two numbers: ");
-    scanf("%d %d",&a,&b);
+    int a , b;
+    printf("Enter the values : ");
+    scanf("%d %d", &a , &b); 
     printf("Before swapping : \n");
-    printf("\t value of a = %d \t ",a);
-    printf("\t value of b = %d \t \n",b);
-    swapnum(&a,&b);
+    printf("a = %d\n" , a);
+    printf("b = %d\n" , b);
+    swapnum(&a , &b);
     printf("After swapping : \n");
-    printf("\t value of a = %d \t",a);
-    printf("\t value of b = %d \t ",b);
-
+    printf("a = %d\n" , a);
+    printf("b = %d\n" , b);
+    return 0;
+}
+void swapnum(int *a , int *b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
