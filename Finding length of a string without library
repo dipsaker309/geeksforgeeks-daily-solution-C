@@ -1,13 +1,15 @@
-/*Finding length of a string without library */
-#include<stdio.h> 
+/*Count the length of a string without using string function*/
+#include<stdio.h>
+#include<string.h>
 int main()
 {
-    char str[] = "Hello World!";
+    char original[100] ;
+    printf("Enter a string : ");
+    fgets(original , sizeof(original) , stdin);
     int length = 0;
-    while(str[length] != 0) // until '\0' character 
-    {
+    while(original[length] != 0){
         length++;
     }
-    printf("Length of the string is: %d ",length);
-
+    printf("The size of the string %s is : %d", original , length);
+    return 0;
 }
