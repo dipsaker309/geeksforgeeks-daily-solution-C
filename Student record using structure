@@ -1,0 +1,21 @@
+/*Student Record using structure*/
+#include<stdio.h>
+struct student{
+    char name[100];
+    int roll;
+    double result;
+};
+int main()
+{
+    struct student s;
+    printf("Enter Student name : ");
+    fgets(s.name , sizeof(s.name) , stdin);
+    printf("Enter roll number: ");
+    scanf("%d", &s.roll);
+    printf("Enter result : ");
+    scanf("%lf", &s.result);
+    printf("---Student Records---\n");
+    printf("Name : %s",s.name);
+    printf("Roll: %d\n",s.roll);
+    printf("Result: %.2f",s.result);
+}
