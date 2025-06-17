@@ -5,7 +5,7 @@
 int main()
 {
    char str[str_size];
-   int alp =0, digits =0, splch = 0, i = 0;
+   int alp = 0, digits = 0, splch = 0, i = 0;
    printf("Input the string :");
    fgets(str, sizeof str, stdin);
    while(str[i] != '\0') // Until it reaches null character
