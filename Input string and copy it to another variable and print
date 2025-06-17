@@ -1,0 +1,12 @@
+/*Input string and copy to another variable and print*/
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char original[100] , copy[100];
+    printf("Enter a string : ");
+    fgets(original , sizeof(original) , stdin);
+    strcpy(copy , original);
+    printf("The Original string : %s" , original);
+    printf("The Copy string : %s", copy);
+}
