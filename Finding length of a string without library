@@ -3,13 +3,13 @@
 #include<string.h>
 int main()
 {
-    char original[100] ;
+    char str[100] ;
     printf("Enter a string : ");
-    fgets(original , sizeof(original) , stdin);
+    fgets(str , sizeof(str) , stdin);
     int length = 0;
-    while(original[length] != 0){
+    while(str[length] != 0){
         length++;
     }
-    printf("The size of the string %s is : %d", original , length);
+    printf("The size of the string %s is : %d", str , length);
     return 0;
 }
