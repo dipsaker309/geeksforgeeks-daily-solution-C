@@ -49,12 +49,12 @@ int main(){
             hasodd = 1;
         }
     }
-    if(hasodd = 1){
+    if(hasodd){
         printf("\nSum of odd numbers is : %d\n" , sumodd);
         printf("product of odd numbers is : %d\n", productodd);
         
     }
-    if(haseven = 1){
+    if(haseven){
         printf("Sum of even numbers is: %d\n", sumeven);
         printf("Product of even number is : %d\n", producteven);
     }
